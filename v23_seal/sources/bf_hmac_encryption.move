@@ -58,7 +58,7 @@ public fun new_public_key(key_server_id: ID, pk_bytes: vector<u8>): PublicKey {
 }
 
 #[test_only]
-public fun get_public_key(key_server: &seal::key_server::KeyServer): PublicKey {
+public fun get_public_key(key_server: &v23_seal::key_server::KeyServer): PublicKey {
     PublicKey {
         key_server: object::id(key_server),
         pk: key_server.pk_as_bf_bls12381(),
